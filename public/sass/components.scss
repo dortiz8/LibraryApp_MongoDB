@@ -1,0 +1,62 @@
+
+@import 'variable';
+@import 'mixins';
+
+// Nav Bar
+nav{
+    margin: 0;
+    @include flexLayout(row, space-between, center, column);
+    height: 20vh;
+    font-size: $nav-text;
+    color: $nav-text-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+}
+
+.main-logo{
+    width: 50%;
+    span{
+        color: $main-blue;
+        font-size: $main-logo-text;
+    }
+}
+
+.nav-links{
+
+    width: 30%;
+    @include flexLayout(row, flex-start, center);
+    align-items: flex-start;
+    margin: 0;
+
+    li{
+
+        a{
+            margin: 0;
+            padding-right: 1.5rem;
+            font-size: $nav-text;
+            color: $logo-text-color
+
+        }
+    }
+
+}
+
+.social-media{
+    width: 20%;
+    @include flexLayout(row, space-around, center);
+
+}
+
+.social-media-icon{
+    width: 2rem;
+    padding-left: 1.5rem;
+}
+
+// Main
+main{
+    margin: 0 0 0 5%;
+    width: 90%;
+
+}

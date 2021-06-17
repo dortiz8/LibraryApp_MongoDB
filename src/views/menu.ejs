@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>La Fuente Restaurante</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <%for(let i=0; i<nav.length; i++){ %>
+                    <li>
+                        <a href="<%=nav[i].link %>">
+                            <%=nav[i].title%>
+                        </a>
+                    </li>
+                    <%}%>
+            </ul>
+            <div class="main-logo">
+                <div>
+                    <span>La Fuente Restaurante</span>
+                </div>
+            </div>
+            <div>
+                <div class="social-media">
+                    <img src="/pics/icons/icons8-facebook2-100.png" alt="facebook logo" class="social-media-icon">
+                    <img src="/pics/icons/icons8-instagram-104.png" alt="facebook logo" class="social-media-icon">
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <div class="page-title">
+            <h1>
+                <%=title %>
+            </h1>
+        </div>
+        <section class="section-description">
+            <article>
+
+                <div class="menu-picDescription-section">
+                    <span class="menu-picture" id="menuDesayunosPicture">
+
+                    </span>
+                    <span class="menu-description">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book.
+                        </p>
+                    </span>
+                </div>
+                <div class="cart-preview">
+                    <a href="/cart" class="cart-name">Tu Orden</a>
+                    <div class="cart-bubble">
+                        <span class="cart-counter">
+                            <%=counter%>
+                        </span>
+                    </div>
+                </div>
+                <div class="order-now">
+                    <div class="menu-items">
+                        <ul>
+                            <% for(let i=0; i<menuItems.length; i++){ %>
+                                <li>
+                                    <h2><a href="/menu/toppings/<%=menuItems[i]._id%>">
+                                            <%=menuItems[i].name%>
+                                        </a></h2>
+                                    <p>
+                                        <%=menuItems[i].description%>
+                                    </p>
+                                    <p>$ <%=menuItems[i].price.single%>
+                                    </p>
+                                    <a href="/cart/add-to-cart/<%=menuItems[i].name%>/<%=menuItems[i].price%>">Add to
+                                        Cart</a>
+                                </li>
+                                <% } %>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="toppings-view">
+                    <%  %>
+                    <h3></h3>
+                    <div class="quantity">
+                        <label for="quantity"></label>
+                        <input type="checkbox" name="quantity">
+                    </div>
+                    <div class="toppings">
+                        <h4>Toppings</h4>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="addons">
+                        <h4>Add-Ons</h4>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <a href="/cart/add-to-cart">Add to Cart</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

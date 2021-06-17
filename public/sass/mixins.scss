@@ -1,0 +1,12 @@
+@import 'variable';
+
+@mixin flexLayout($direction, $space, $aligning, $columndir: false) {
+    display: flex;
+    flex: $direction;
+    justify-content: $space;
+    align-items: $aligning;
+    @if $columndir {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

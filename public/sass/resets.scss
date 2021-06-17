@@ -1,0 +1,21 @@
+@import 'variable';
+
+body{
+    width: 100%;
+    margin: 0;
+    font-family: $main-font;
+}
+h1, h2{
+    font-weight: 400;
+}
+p{
+    font-weight: 200;
+    color: $text-color;
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+}

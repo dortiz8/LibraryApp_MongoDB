@@ -1,0 +1,49 @@
+@import 'variable';
+@import 'mixins';
+
+.page-title{
+    h1{
+        margin: 0;
+    }
+}
+.order-now{
+
+    @include flexLayout(row, flex-start, flex-start)
+}
+.menu-items{
+    width: 50%;
+   
+}
+.order-list{
+    width: 50%;
+
+
+}
+.cart-title{
+    width: 100%;
+    background-color: $main-red;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: whitesmoke;
+}
+.list-item{
+    @include flexLayout(row, space-evenly, center)
+}
+.cart-preview{
+    @include flexLayout(row, flex-end, center)
+}
+.cart-bubble{
+    @include flexLayout(row, center, center);
+    height: 1.2rem;
+    width: 1.2rem;
+    border: none;
+    border-radius: 50%;
+    background-color:$main-red;
+
+}
+.cart-counter{
+    width: 90%;
+    text-align: center;
+    color: $main-white;
+}

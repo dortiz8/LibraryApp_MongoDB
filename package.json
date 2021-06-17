@@ -1,0 +1,36 @@
+{
+  "name": "libraryapp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=app,app:* nodemon app.js",
+    "sass:compile": "node-sass public/sass/style.scss public/css/style.css -w"
+  },
+  "author": "Dante Ortiz",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "4.1.0",
+    "debug": "4.3.1",
+    "ejs": "3.1.6",
+    "express": "4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "3.6.4",
+    "morgan": "1.10.0"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE-ENV": "development",
+      "PORT": 2000
+    }
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "description": ""
+}

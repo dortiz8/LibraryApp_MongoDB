@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>La Fuente Restaurante</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <%for(let i=0; i<homenav.length; i++){ %>
+                    <li>
+                        <a href="<%=homenav[i].link %>">
+                            <%=homenav[i].title%>
+                        </a>
+                    </li>
+                    <%}%>
+            </ul>
+            <div class="main-logo">
+                <div>
+                    <span>La Fuente Restaurante</span>
+                </div>
+            </div>
+            <div>
+                <div class="social-media">
+                    <img src="/pics/icons/icons8-facebook2-100.png" alt="facebook logo" class="social-media-icon">
+                    <img src="/pics/icons/icons8-instagram-104.png" alt="facebook logo" class="social-media-icon">
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <div class="page-title">
+        <h1>
+            <%=title %>
+        </h1>
+    </div>
+    <section class="section-description">
+       <div>
+
+        <ul>
+            <%for(let i=0; i<cart.length; i++){ %>
+            <li>
+                <span><%=cart[i].name%></span>
+                <span>$<%=cart[i].price%></span>
+                <a href="/cart/delete-from-cart/<%=cart[i].id%>">Delete</a>
+            </li>
+            <%}%>
+        </ul>
+        <div><%=total%> </div>
+        <div>
+            <a href="/cart/add-more-items">Add More Items</a>
+        </div>
+    </div>
+    </section>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
